@@ -15,6 +15,12 @@ public struct StatModel: Identifiable {
     public var id: String {
         description + shortDescription + "\(value)"
     }
+    
+    public init(description: String, shortDescription: String, value: Double) {
+        self.description = description
+        self.shortDescription = shortDescription
+        self.value = value
+    }
 }
 
 public struct StandingModel: Identifiable {
@@ -25,5 +31,12 @@ public struct StandingModel: Identifiable {
 
     public var id: Int {
         rank
+    }
+    
+    public init(rank: Int, name: String, logo: String, stats: [StatModel]) {
+        self.rank = rank
+        self.name = name
+        self.logo = logo
+        self.stats = stats
     }
 }

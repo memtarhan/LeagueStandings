@@ -95,7 +95,7 @@ struct StandingTeamStatsRow: View {
     }
 }
 
-public struct StandingsView: View {
+public struct LeagueStandingsView: View {
     var standings: [StandingModel]
 
     public var body: some View {
@@ -166,7 +166,7 @@ public struct StandingsView: View {
 }
 
 #Preview {
-    StandingsView(standings: standingsSample)
+    LeagueStandingsView(standings: standingsSample)
 }
 
 @MainActor fileprivate var standingsSample = [
