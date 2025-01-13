@@ -96,7 +96,11 @@ struct StandingTeamStatsRow: View {
 }
 
 public struct LeagueStandingsView: View {
-    var standings: [StandingModel]
+    @State var standings: [StandingModel]
+    
+    public init(standings: [StandingModel]) {
+        self.standings = standings
+    }
 
     public var body: some View {
         ScrollView {
