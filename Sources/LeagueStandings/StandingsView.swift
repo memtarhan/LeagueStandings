@@ -95,7 +95,7 @@ struct StandingTeamStatsRow: View {
     }
 }
 
-struct StandingsView: View {
+public struct StandingsView: View {
     var standings: [StandingModel]
 
     public var body: some View {
