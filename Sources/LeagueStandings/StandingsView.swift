@@ -166,5 +166,62 @@ public struct StandingsView: View {
 }
 
 #Preview {
-    StandingsView(standings: StandingModel.sample)
+    StandingsView(standings: standingsSample)
 }
+
+@MainActor fileprivate var standingsSample = [
+    StandingModel(
+        rank: 1,
+        name: "Liverpool",
+        logo: "https://cdn.ssref.net/req/202501061/tlogo/fb/mini.822bd0ba.png",
+        stats: [
+            StatModel(
+                description: "Games",
+                shortDescription: "MP",
+                value: 19
+            ),
+            StatModel(
+                description: "Wins",
+                shortDescription: "W",
+                value: 14
+            ),
+            StatModel(
+                description: "Ties",
+                shortDescription: "D",
+                value: 4
+            ),
+            StatModel(
+                description: "Losses",
+                shortDescription: "L",
+                value: 1
+            ),
+        ]
+    ),
+    StandingModel(
+        rank: 2,
+        name: "Arsenal",
+        logo: "https://cdn.ssref.net/req/202501061/tlogo/fb/mini.18bb7c10.png",
+        stats: [
+            StatModel(
+                description: "Games",
+                shortDescription: "MP",
+                value: 20
+            ),
+            StatModel(
+                description: "Wins",
+                shortDescription: "W",
+                value: 11
+            ),
+            StatModel(
+                description: "Ties",
+                shortDescription: "D",
+                value: 7
+            ),
+            StatModel(
+                description: "Losses",
+                shortDescription: "L",
+                value: 2
+            ),
+        ]
+    ),
+]
